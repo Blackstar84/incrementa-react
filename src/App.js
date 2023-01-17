@@ -8,20 +8,19 @@ class App extends Component {
 
     this.state = { value: 0 }
   }
-  
+
   render() {
     return (
       <div>
         <span className="value">{this.state.value}</span>
-        <button id="inc">Incrementa</button>
+        <button id="inc" onClick={this.increment}>Incrementa</button>
       </div>
     );
   }
-  
+
   increment() {
     this.setState({ value: this.state.value + 1 });
   }
-  
 }
 
 export default App;
